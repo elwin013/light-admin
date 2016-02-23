@@ -9,6 +9,8 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 
 <tiles:importAttribute name="screenName" ignore="true"/>
+<tiles:importAttribute name="screenContext" ignore="true"/>
+<tiles:importAttribute name="customStyle" ignore="true"/>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="<light:url value="/styles/main.css"/>">
     <link rel="stylesheet" type="text/css" href="<light:url value="/styles/lightadmin.css"/>">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cuprum">
+    <c:if test="${not empty (customStyle)}">
+        <link rel="stylesheet" type="text/css" href="<spring:url value="${customStyle}"/>">
+    </c:if>
 
     <tiles:insertAttribute name="common-scripts-include"/>
 

@@ -57,4 +57,6 @@ public class LightAdminConfigurationUtils {
 
     public static final String LIGHT_ADMINISTRATION_I18N = "light:administration:i18n";
     public static final String LIGHT_ADMINISTRATION_LANGUAGES = "light:administration:languages";
+
+    public static final String LIGHT_ADMINISTRATION_CUSTOM_STYLE = "light:administration:custom-style";
 }

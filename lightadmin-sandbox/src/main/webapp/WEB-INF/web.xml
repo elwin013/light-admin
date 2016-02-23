@@ -28,6 +28,11 @@
     </context-param>
 
     <!--<context-param>-->
+        <!--<param-name>light:administration:custom-style</param-name>-->
+        <!--<param-value>/styles/style.css</param-value>-->
+    <!--</context-param>-->
+
+    <!--<context-param>-->
     <!--<param-name>light:administration:security-logout-url</param-name>-->
     <!--<param-value>/logout</param-value>-->
     <!--</context-param>-->

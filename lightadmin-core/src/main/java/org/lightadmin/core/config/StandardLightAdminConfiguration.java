@@ -41,6 +41,7 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
     private final boolean demoMode;
     private boolean i18n;
     private String[] languages;
+    private String customStylePath;
 
     public StandardLightAdminConfiguration(ServletContext servletContext) {
         this.basePackage = servletContext.getInitParameter(LIGHT_ADMINISTRATION_BASE_PACKAGE);
@@ -67,6 +68,7 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
         if(i18n) {
             this.languages = servletContext.getInitParameter(LIGHT_ADMINISTRATION_LANGUAGES).split(",");
         }
+        this.customStylePath = servletContext.getInitParameter(LIGHT_ADMINISTRATION_CUSTOM_STYLE);
     }
 
     @Override
@@ -126,6 +128,11 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
 
     public boolean isDemoMode() {
         return demoMode;
+    }
+
+    @Override
+    public String getCustomStylePath() {
+        return customStylePath;
     }
 
     @Override

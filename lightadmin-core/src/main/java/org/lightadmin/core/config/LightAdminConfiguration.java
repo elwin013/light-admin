@@ -47,4 +47,5 @@ public interface LightAdminConfiguration {
 
     String[] getLanguages();
 
+    String getCustomStylePath();
 }
